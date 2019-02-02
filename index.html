@@ -5,25 +5,13 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <title>Abdou MJR Portfolio</title>
           <meta http-equiv="X-UA-Compatible" content="IE=9">
         <link rel="icon" href="assets/personal.jpg.jpg" type="image/x-icon">
      <link rel="stylesheet" href="assets/default.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
 <link rel="stylesheet" href="./assets/introLoader.min.css">
-
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Site Title -->
-        <title>Oki. - Personal Portfolio Template</title>
 
         <!-- Site Logo -->
         <link href="" rel="shortcut icon" type="image/x-icon">
@@ -124,7 +112,7 @@
                             <li><a href="#Resume" class="scroll-resume">Resume</a></li>
                             <li><a href="#Portfolio" class="scroll-portfolio">Portfolio</a></li>
                             <li><a href="#Blogs" class="scroll-blogs">Blog</a></li>
-                            <li><a href="#Contact" class="scroll-contact">Contact me</a></li>
+                            <li><a href="https://www.linkedin.com/in/abdou-mjr" class="scroll-contact">Contact me</a></li>
                         </ul>
                         <!-- End Navbar Center -->
                         <!-- Start Navbar Right -->
@@ -264,7 +252,7 @@
 
                 <div class="info-about">
 
-                    <h2 class="wow slideInDown" data-wow-duration="2s" style="visibility: hidden; animation-duration: 2s; animation-name: none;">About <span class="color-me">me</span></h2>
+                    <h1 class="wow slideInDown" data-wow-duration="2s" style="visibility: hidden; animation-duration: 2s; animation-name: none;">About <span class="color-me">me</span></h1>
                     <hr class="line-title-left">
                     <h3>I am a web developer and designer</h3>
                     <p>
@@ -285,7 +273,7 @@
                     
                     </div>
 
-                    <button class="btn wow slideInUp" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">Contact Me</button>
+                    <button class="btn wow slideInUp" data-wow-duration="1s" onclick="window.location='https://www.linkedin.com/in/abdou-mjr'" style="visibility: hidden; animation-duration: 1s; animation-name: none;">Contact Me</button>
                     <button class="btn wow slideInUp" onclick="window.location='./assets/andoumjrResume.pdf'"  data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">Download Resume</button>
 
                 </div>
@@ -628,58 +616,6 @@
 </div>
 <!-- End Blogs -->
 
-<!-- Start Contact Me -->
-<div id="contact" class="contact section-padding">
-    <!-- Start Container 1 -->
-    <div class="container">
-        <div class="contents-titles-section">
-            <h2 class="section-title wow slideInDown" data-wow-duration="2s" style="visibility: hidden; animation-duration: 2s; animation-name: none;"> Contact <span class="color-me">Me</span></h2>
-            <hr class="line-title-center">
-        </div>
-    </div>
-    <!-- End Container 1 -->
-
-    <!-- Start Container 2 -->
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 box-contact-form">
-                <form action="#" method="post">
-                    <input name="form-name" value="form 2" type="hidden">
-                    <input id="u_email" class="form-control" placeholder="Email" type="email">                
-                    <input id="u_name" class="form-control" placeholder="Name" type="text">
-                    <input id="u_website" class="form-control" placeholder="Website" type="url">
-                    <input id="u_phone" class="form-control" placeholder="Phone" type="tel">
-                    <textarea id="u_msg" class="form-control" placeholder="Message"></textarea>
-                    <button class="btn send-message" type="button" >Send</button>
-                    <div id="res"></div>
-                </form>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 box-info-contact">
-                <div class="info-contacts">
-                    <div class="my-phone">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <h4 class="titles-sections-contacts">My Number</h4>
-                        <p class="info-titles-contacts ltr">+(213) 558 28 28 30</p>
-                    </div>
-                    <div class="my-email">
-                        <i class="fa fa-at" aria-hidden="true"></i>
-                        <h4 class="titles-sections-contacts">My Email</h4>
-                        <p class="info-titles-contacts">abdoumjr@gmail.com</p>
-                    </div>
-                    <div class="my-address">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <h4 class="titles-sections-contacts"> Adresse</h4>
-                        <p class="info-titles-contacts">Algiers, ALGERIA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Container 2 -->
-</div>
-<!-- End Contact Me -->
-
-
 
 
 <br>
@@ -739,38 +675,6 @@
 
         <script type="text/javascript">
 $(document).ready(function() {
-
-    $('.send-message').click(function(){
-        var name = $("#u_name").val();
-        var email = $("#u_phone").val();
-        var subject = $("#u_email").val();
-        var message = $("#u_msg").val() + $("#u_website").val();
-
-        if (name == "" || email == "" || subject == "" || message == "") {
-            $('#preloader').hide();
-            return;
-        }
-
-        var dataString = "name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message;
-
-        $.ajax({
-            type: "POST",
-            url: "http://abdoumjr.rf.gd/PHPMailer-6.0.3/index.php",
-            data: dataString,
-            cache: false,
-            success: function (html) {
-
-                   $('#res').append("<div class='alert alert-warning' role='alert'><strong>Success! </strong>Mail sent succesfully <br><strong>Note </strong>Please Contact me on social media in case i don't recieve your Email</div>");
-                    /* window.location.assign(content); */
-                    $("#u_name").val('');
-                    $("#u_phone").val('');
-                    $("#u_email").val('');
-                    $("#u_msg").val('');
-                    $("#u_website").val('');
-        
-            }
-        });
-    })
     $("#element").introLoader({
         animation: {
             name: 'lettersLoader',
