@@ -1,2 +1,2 @@
 # portfolio-v2
-and old version of my portfolio
+OLD version of my portfolio :)
